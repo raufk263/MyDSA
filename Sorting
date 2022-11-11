@@ -25,6 +25,7 @@ int main() {
         cout<<arr[i]<<" ";
     }
 }
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Bubble Sorting:-
 Approach-Swap the adjacent element if they are in wrong order.
@@ -32,10 +33,9 @@ Note-By adding the flag we can improve its efficiency and it can be reduced to O
 Time complexity-O(n^2)-Worst Case
 			O(n^2)-Average Case
 			O(n)-Best Case.
-
+			
 #include<iostream>
 using namespace std;
-
 int main()
 {
 	int n;
@@ -61,10 +61,12 @@ int main()
 		cout<<arr[i]<<" ";
 	}
 }
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
 Quick Sort:-
 Idea-It is based on divide and conquer approach where we pick pivot element and places the element lower than pivot in left and elements at right greater than pivot.
 Functions :- Partition,QuickSort,Swap.
+Time Complexity:- O(nlog n) <Best Case> / O(n^2) <Worst Case>
+Space Complexity:-O(log n).
 
 #include<iostream>
 using namespace std;
@@ -101,4 +103,4 @@ int main(){
                 cout<<arr[i]<<" ";
         }cout<<endl;
 }
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
