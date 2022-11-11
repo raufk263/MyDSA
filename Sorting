@@ -62,4 +62,43 @@ int main()
 	}
 }
 
+Quick Sort:-
+Idea-It is based on divide and conquer approach where we pick pivot element and places the element lower than pivot in left and elements at right greater than pivot.
+Functions :- Partition,QuickSort,Swap.
+
+#include<iostream>
+using namespace std;
+void swap(int* a,int* b){
+	int temp=*a;
+	*a=*b;
+	*b=temp;
+}
+int partition(int arr[],int start,int end){
+        int pivot=arr[end];
+        int pi=start;
+        for(int i=start; i<end; i++){
+                if(arr[i]<=pivot){
+                        swap(arr[i],arr[pi]);
+                        pi++;
+                }
+        }
+        swap(arr[pi],arr[end]);
+        return pi;
+}
+void quickSort(int arr[],int start,int end){
+        if(start<end){
+                int pi=partition(arr,start,end);
+                quickSort(arr,start,pi-1);
+                quickSort(arr,pi+1,end);
+        }
+}
+
+int main(){
+        int arr[]={6,32,4,8,1,9,2};
+        int len=sizeof(arr)/sizeof(arr[0]);
+        quickSort(arr,0,len-1);
+        for(int i=0; i<len; i++){
+                cout<<arr[i]<<" ";
+        }cout<<endl;
+}
 
